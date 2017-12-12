@@ -10,7 +10,7 @@ public class Game {
 		String yourName = scan.next();
 		Player you = new Player(yourName);
 		players.add(you);
-		scan.close();\
+		scan.close();
 		for (int i = 2; i <= otherPlayers + 1; i++) {
 			Player x = new Player("Player " + Integer.toString(i));
 			players.add(x);
@@ -44,6 +44,8 @@ public class Game {
 		for (int i = 0; i < texas.players.size(); i++) {
 			deck.dealHand(texas.players.get(i));
 		}
+		System.out.println("You have " + texas.players.get(0).getHand());
+		
 		
 
 	}
